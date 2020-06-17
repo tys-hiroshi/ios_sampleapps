@@ -64,16 +64,33 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         dismiss(animated: true, completion: nil)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-
-        if info[.originalImage] as? UIImage != nil{
-            let selectedImage = info[.originalImage] as! UIImage
-            //UserDefaults.standard.set(selectedImage.jpegData(compressionQuality: 0.1), forKey: "userImage")
-            photoImageView.image = selectedImage
-            picker.dismiss(animated: true, completion: nil)
-
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // The info dictionary may contain multiple representations of the image. You want to use the original.
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
+        photoImageView.image = selectedImage
+        // Dismiss the picker.
+        dismiss(animated: true, completion: nil)
     }
+
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+//
+//        if info[UIImagePickerController.InfoKey.originalImage.rawValue] != nil{
+//            let selectedImage1 = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
+//        }
+//
+//        // The info dictionary may contain multiple representations of the image. You want to use the original.
+//        guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else {
+//            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+//        }
+//
+//        // Set photoImageView to display the selected image.
+//        photoImageView.image = selectedImage
+//
+//        // Dismiss the picker.
+//        dismiss(animated: true, completion: nil)
+//    }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         mealNameLabel.text = textField.text
