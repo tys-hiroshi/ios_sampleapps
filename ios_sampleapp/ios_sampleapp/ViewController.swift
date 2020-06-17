@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     //MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
@@ -22,7 +22,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Handle the text field’s user input through delegate callbacks.
         //https://qiita.com/narukun/items/326bd50a78cf34371169
         nameTextField.delegate = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.selectImageFromPhotoLibrary(_:)))
+        selectImageFromPhotoLibrary(tapGesture);
     }
+    
+//    func setupImageClickListener() {
+//        let tapGestureRecognizer
+//            = UITapGestureRecognizer(target:self, action:#selector(ViewController.selectImageFromPhotoLibrary(_:)));
+////        photoImageView.isUserInteractionEnabled = true
+////        photoImageView.addGestureRecognizer(tapGestureRecognizer)
+//    }
 
     @IBAction func setDefaultLabelText(_ sender: UIButton) {
         mealNameLabel.text = "Default Text"
