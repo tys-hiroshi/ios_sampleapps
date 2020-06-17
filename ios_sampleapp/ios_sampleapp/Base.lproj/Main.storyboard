@@ -36,6 +36,17 @@
                                     <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdK-ec-0id"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0g-L6-93h">
+                                <rect key="frame" x="87" y="429" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="i0g-L6-93h" secondAttribute="height" multiplier="15:8" id="FeG-gh-j16"/>
+                                    <constraint firstAttribute="width" secondItem="i0g-L6-93h" secondAttribute="height" multiplier="15:8" id="RVU-3E-OVK"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Src-B8-3nX" appends="YES" id="gd7-bJ-K17"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -43,9 +54,15 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="694-1b-dBT" id="TKn-0K-frp"/>
                         <outlet property="nameTextField" destination="UET-sg-qRE" id="OQ3-IM-rUd"/>
+                        <outlet property="photoImageView" destination="i0g-L6-93h" id="cWP-YF-ab2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Src-B8-3nX">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="9W2-Kp-xeS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
