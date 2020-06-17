@@ -23,7 +23,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         //https://qiita.com/narukun/items/326bd50a78cf34371169
         nameTextField.delegate = self
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.selectImageFromPhotoLibrary(_:)))
-        selectImageFromPhotoLibrary(tapGesture);
+        tapGesture.delegate = self
+        //selectImageFromPhotoLibrary(tapGesture);
+        self.view.addGestureRecognizer(tapGesture)
     }
     
 //    func setupImageClickListener() {
@@ -63,17 +65,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        // The info dictionary may contain multiple representations of the image. You want to use the original.
-        guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+
+        if info[.originalImage] as? UIImage != nil{
+            let selectedImage = info[.originalImage] as! UIImage
+            //UserDefaults.standard.set(selectedImage.jpegData(compressionQuality: 0.1), forKey: "userImage")
+            photoImageView.image = selectedImage
+            picker.dismiss(animated: true, completion: nil)
+
         }
-        
-        // Set photoImageView to display the selected image.
-        photoImageView.image = selectedImage
-        
-        // Dismiss the picker.
-        dismiss(animated: true, completion: nil)
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
