@@ -15,6 +15,7 @@
 		233311D52498FB4C006D3FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233311D32498FB4C006D3FC7 /* LaunchScreen.storyboard */; };
 		233311E02498FB4C006D3FC7 /* ios_sampleappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233311DF2498FB4C006D3FC7 /* ios_sampleappTests.swift */; };
 		233311EB2498FB4C006D3FC7 /* ios_sampleappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233311EA2498FB4C006D3FC7 /* ios_sampleappUITests.swift */; };
+		2380EF32249BAB390061C06D /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380EF31249BAB390061C06D /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		233311E62498FB4C006D3FC7 /* ios_sampleappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_sampleappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		233311EA2498FB4C006D3FC7 /* ios_sampleappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_sampleappUITests.swift; sourceTree = "<group>"; };
 		233311EC2498FB4C006D3FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2380EF31249BAB390061C06D /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		233311C72498FB4A006D3FC7 /* ios_sampleapp */ = {
 			isa = PBXGroup;
 			children = (
+				2380EF31249BAB390061C06D /* RatingControl.swift */,
 				233311C82498FB4A006D3FC7 /* AppDelegate.swift */,
 				233311CA2498FB4A006D3FC7 /* SceneDelegate.swift */,
 				233311CC2498FB4A006D3FC7 /* ViewController.swift */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2380EF32249BAB390061C06D /* RatingControl.swift in Sources */,
 				233311CD2498FB4A006D3FC7 /* ViewController.swift in Sources */,
 				233311C92498FB4A006D3FC7 /* AppDelegate.swift in Sources */,
 				233311CB2498FB4A006D3FC7 /* SceneDelegate.swift in Sources */,
