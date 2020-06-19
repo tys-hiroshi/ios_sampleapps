@@ -40,8 +40,8 @@
                                 <rect key="frame" x="135" y="138" width="143" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-38-0Mg" customClass="RatingControl" customModule="ios_sampleapp" customModuleProvider="target">
-                                <rect key="frame" x="107" y="601" width="200" height="110"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Is0-zr-I5r" customClass="RatingControl" customModule="ios_sampleapp" customModuleProvider="target">
+                                <rect key="frame" x="79" y="581" width="254" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>

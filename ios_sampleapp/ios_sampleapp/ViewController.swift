@@ -64,41 +64,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         dismiss(animated: true, completion: nil)
     }
 
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-////        // The info dictionary may contain multiple representations of the image. You want to use the original.
-////        guard let selectedImage = info[.originalImage] as? UIImage else {
-////            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-////        }
-////        //https://qiita.com/cotrpepe/items/518c4476ca957a42f5f1
-////        if(selectedImage != nil){
-////            photoImageView.image = selectedImage  //Thread 1: Fatal error: Unexpectedly found nil while implicitly unwrapping an Optional value
-////
-////        }
-//        //選択された画像を取得. https://faboplatform.github.io/SwiftDocs/1.uikit/056_uiimagepickercontroller/
-//        let selectedImage: UIImage?  = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-//        photoImageView.image = selectedImage
-//        // Dismiss the picker.
-//        dismiss(animated: true, completion: nil)
-//    }
-
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//
-//        if info[UIImagePickerController.InfoKey.originalImage.rawValue] != nil{
-//            let selectedImage1 = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
-//        }
-//
-//        // The info dictionary may contain multiple representations of the image. You want to use the original.
-//        guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else {
-//            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-//        }
-//
-//        // Set photoImageView to display the selected image.
-//        photoImageView.image = selectedImage
-//
-//        // Dismiss the picker.
-//        dismiss(animated: true, completion: nil)
-//    }
-
     func imagePickerController (_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let selectedImage = info [.originalImage] as? UIImage {
             photoImageView.image = selectedImage  //photoImageView is nil !!!!!!
