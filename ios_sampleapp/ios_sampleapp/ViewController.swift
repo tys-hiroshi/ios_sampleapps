@@ -22,10 +22,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Handle the text field’s user input through delegate callbacks.
         //https://qiita.com/narukun/items/326bd50a78cf34371169
         nameTextField.delegate = self
+        //http://yyux.hatenablog.com/entry/2018/06/16/181201
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.selectImageFromPhotoLibrary(_:)))
         tapGesture.delegate = self
         //selectImageFromPhotoLibrary(tapGesture);
-        self.view.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
     }
     
 //    func setupImageClickListener() {
@@ -46,6 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
 
     //MARK: Actions
+    //http://yyux.hatenablog.com/entry/2018/06/16/181201
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         // Hide the keyboard.
         nameTextField.resignFirstResponder()
