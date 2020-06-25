@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  ios_sampleapp
 //
 //  Created by macmini on 2020/06/16.
@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
+class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     //MARK: Properties
+
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var mealNameLabel: UILabel!
-    @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var photoImageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         //https://qiita.com/narukun/items/326bd50a78cf34371169
         nameTextField.delegate = self
         //http://yyux.hatenablog.com/entry/2018/06/16/181201
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.selectImageFromPhotoLibrary(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MealViewController.selectImageFromPhotoLibrary(_:)))
         tapGesture.delegate = self
         //selectImageFromPhotoLibrary(tapGesture);
         view.addGestureRecognizer(tapGesture)

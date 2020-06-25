@@ -52,7 +52,13 @@
                             <outlet property="delegate" destination="1zR-08-ezh" id="Hrc-pM-36K"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Meals" id="Fnu-IU-wwB"/>
+                    <navigationItem key="navigationItem" title="Your Meals" id="Fnu-IU-wwB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xJZ-Ot-w9t">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="VSC-ob-ffL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKX-ED-XzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +67,7 @@
         <!--Meal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="ios_sampleapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,9 +107,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JzJ-DR-zrK"/>
                     <connections>
-                        <outlet property="nameTextField" destination="XSo-MH-Qt0" id="LXA-ah-4Cp"/>
-                        <outlet property="photoImageView" destination="h0g-dS-PZ5" id="8tV-d7-3An"/>
+                        <outlet property="photoImageView" destination="h0g-dS-PZ5" id="MvF-3M-MeR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
